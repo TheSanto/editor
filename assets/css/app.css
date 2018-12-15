@@ -16,8 +16,26 @@ a {
   padding: 1em;
   resize: vertical;
   outline: none;
+  max-height: 80vh;
+  resize: none;
 }
 
+#editor img {
+  width: 50%;
+}
+
+#editor::-webkit-scrollbar {
+  width: 0.3rem;
+}
+#editor::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+#editor::-webkit-scrollbar-thumb {
+  background: #888;
+}
+#editor::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 .toolbar {
   text-align: center;
   margin-top: 2rem;
@@ -43,8 +61,9 @@ a {
 .fore-wrapper:hover,
 .back-wrapper:hover {
   /* background: #f2f2f2; */
-  transition: all .3s ease;
-  border-color: #8c8c8c;
+    transition: all .3s ease;
+    border-color: rgba(140, 140, 140, 0.45);
+    transform: scale(1.2,1.2);
 }
 .fore-wrapper{
   color:#e91e63;
@@ -116,3 +135,23 @@ a.palette-item:hover {
   background: #FFF;
   margin-bottom: 2px;
 }
+.git_url{
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background-color: #607D8B;
+  border-radius: 2px;
+}
+.git_url::before, .git_url::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+.git_url i{
+  font-size: 1.5rem;
+    color: #fff;
+  }
+  .git_url a{
+  padding: .5rem 1.5rem;
+    display: block;
+  }

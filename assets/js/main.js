@@ -1,0 +1,1 @@
+$('.editor_wrap').initEditor();
